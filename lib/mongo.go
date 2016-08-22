@@ -20,20 +20,14 @@ type MongoDB struct {
 }
 
 func (m *MongoDB) Init(c *Config) error {
-	session, err := mgo.DialWithInfo(&mgo.DialInfo{
-		Addrs:    []string{c.Hostname + ":" + c.Port},
-		Database: c.Database,
-		Username: c.Username,
-		Password: c.Password,
-		Timeout:  time.Duration(1 * time.Hour),
-	})
+	session, err := mgo.Dial("mongodb://segment:xquulpwz@ds033427-a0.mongolab.com:33427,ds033427-a1.mongolab.com:33427/synap-production-eu?replicaSet=rs-ds033427")
 	if err != nil {
 		return err
 	}
 
 	m.db = session.DB(c.Database)
 	m.DBName = c.Database
-	logrus.Debugf("Connection to database '%s' established!", c.Database)
+	logrus.Debugf("JG Connection to database '%s' established!", c.Database)
 	return nil
 }
 
