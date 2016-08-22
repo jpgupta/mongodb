@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	Version = "v0.1.4-beta"
+	Version = "v0.0.1 -jg"
 	Usage   = `
 Usage:
   mongodb
