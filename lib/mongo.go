@@ -25,7 +25,7 @@ func (m *MongoDB) Init(c *Config) error {
 		Database: c.Database,
 		Username: c.Username,
 		Password: c.Password,
-		Timeout:  time.Duration(5 * time.Second),
+		Timeout:  time.Duration(1 * time.Hour),
 	})
 	if err != nil {
 		return err
