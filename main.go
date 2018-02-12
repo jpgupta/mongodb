@@ -4,9 +4,9 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/asaskevich/govalidator"
-	"github.com/segment-sources/mongodb/lib"
+	"github.com/jpgupta/mongodb/lib"
 	"github.com/segmentio/objects-go"
 
 	"github.com/segmentio/ecs-logs-go/logrus"
